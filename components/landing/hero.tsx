@@ -41,7 +41,7 @@ export function Hero() {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           
           {/* Column: Text Content (Now first on all devices for maximum impact) */}
-          <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-left lg:max-w-2xl">
+          <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left lg:max-w-2xl flex flex-col items-center lg:items-start">
             {/* Main Headline Group */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -49,7 +49,7 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="space-y-3 sm:space-y-4 lg:space-y-6"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-widest mx-auto lg:mx-0">
                 <Zap className="w-3 h-3" />
                 Engenharia de Elite
               </div>
@@ -57,49 +57,51 @@ export function Hero() {
                 <span className="block mb-1 text-balance">Seu site leva 2 segundos para carregar?</span>
                 <span className="gradient-text block text-balance">Parabéns, você esta perdendo metade do seu lucro!</span>
               </h1>
-              <p className="text-sm sm:text-base lg:text-xl text-muted-foreground/80 leading-relaxed font-medium max-w-xl text-balance">
+              <p className="text-sm sm:text-base lg:text-xl text-muted-foreground/80 leading-relaxed font-medium max-w-xl text-balance mx-auto lg:mx-0">
                 Cerca de 53% dos usuários de dispositivos móveis abandonam um site se ele demorar mais de 3 segundos para carregar.
               </p>
             </motion.div>
 
-            {/* Call to Action Group */}
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="bg-linear-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold px-8 sm:px-10 py-5 sm:py-7 text-sm sm:text-base rounded-full glow-purple group"
+            {/* CTA + Badges Group (Centered relative to each other) */}
+            <div className="flex flex-col items-center lg:items-center w-full lg:w-fit gap-4 sm:gap-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="w-full sm:w-auto"
               >
-                <Link 
-                  href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site."
-                  target="_blank"
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full sm:w-auto bg-linear-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold px-8 sm:px-10 py-5 sm:py-7 text-sm sm:text-base rounded-full glow-purple group"
                 >
-                  FALAR COM ESPECIALISTA
-                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-            </motion.div>
+                  <Link 
+                    href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site."
+                    target="_blank"
+                  >
+                    FALAR COM ESPECIALISTA
+                    <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+              </motion.div>
 
-            {/* Authority Badges */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-wrap items-center gap-4 sm:gap-6 opacity-70"
-            >
-              <div className="flex items-center gap-2">
-                <Gauge className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
-                <span className="text-[10px] sm:text-[12px] font-extrabold uppercase tracking-tight">100% Score</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
-                <span className="text-[10px] sm:text-[12px] font-extrabold uppercase tracking-tight">SEO de Elite</span>
-              </div>
-            </motion.div>
+              {/* Authority Badges */}
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+                className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 opacity-70"
+              >
+                <div className="flex items-center gap-2">
+                  <Gauge className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
+                  <span className="text-[10px] sm:text-[12px] font-extrabold uppercase tracking-tight text-white whitespace-nowrap">100% Score</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+                  <span className="text-[10px] sm:text-[12px] font-extrabold uppercase tracking-tight text-white whitespace-nowrap">SEO de Elite</span>
+                </div>
+              </motion.div>
+            </div>
           </div>
 
           {/* Column: Visual Mockup */}
