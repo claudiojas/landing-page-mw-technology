@@ -1,6 +1,6 @@
 # Módulo Web Technology | Engenharia de Performance de Elite
 
-![Módulo Web Logo](app/assets/logoIcon.png)
+<img width="939" height="266" alt="logowhitcomplet" src="https://github.com/user-attachments/assets/f76f889b-bdef-456a-a244-32d204eeb6b4" />
 
 Bem-vindo ao repositório oficial da **Módulo Web Technology**. Este projeto é uma vitrine de alta performance e engenharia aplicada ao marketing digital, focada em converter visitantes em leads de alto valor através de experiências ultrarrápidas e inteligência artificial.
 
