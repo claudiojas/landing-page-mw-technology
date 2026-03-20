@@ -1,11 +1,9 @@
 import { Header } from "@/components/landing/header"
 import { Hero } from "@/components/landing/hero"
 import { PerformanceImpact } from "@/components/landing/performance-impact"
-import { Comparison } from "@/components/landing/comparison"
 import { About } from "@/components/landing/about"
-import { Portfolio } from "@/components/landing/portfolio"
+import { PortfolioShowcase } from "@/components/landing/portfolio-showcase"
 import { FAQ } from "@/components/landing/faq"
-import { ContactForm } from "@/components/landing/contact-form"
 import { Footer } from "@/components/landing/footer"
 import { WhatsAppButton } from "@/components/landing/whatsapp-button"
 
@@ -15,9 +13,8 @@ export default function HomePage() {
       <Header />
       <Hero />
       <PerformanceImpact />
-      <Comparison />
+      <PortfolioShowcase />
       <About />
-      <Portfolio />
       <FAQ />
       <Footer />
       <WhatsAppButton />
