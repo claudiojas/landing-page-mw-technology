@@ -9,22 +9,22 @@ export default function TermsOfUse() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Header />
-      
+
       <section className="pt-32 pb-24 lg:pt-48 lg:pb-40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-16 text-center lg:text-left"
+            className="relative z-20 mb-16 text-center lg:text-left"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest mb-6">
               <Gavel className="w-3 h-3" />
               Compliance & Ética
             </div>
-            <h1 className="text-4xl lg:text-7xl font-black mb-6 italic uppercase leading-none">
-              Termos de <br/> <span className="gradient-text text-6xl lg:text-8xl">Serviço</span>
+            <h1 className="text-3xl lg:text-5xl font-black mb-6 italic uppercase leading-none">
+              Termos de <br /> <span className="gradient-text text-5xl lg:text-7xl pr-4">Serviço</span>
             </h1>
-            <p className="text-muted-foreground text-lg italic">Edição 2024</p>
+            <p className="text-muted-foreground text-lg italic">Edição 2026</p>
           </motion.div>
 
           <div className="space-y-16">
@@ -32,7 +32,7 @@ export default function TermsOfUse() {
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="p-8 rounded-3xl border border-white/5 bg-zinc-900/50">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                   <Cpu className="w-6 h-6 text-primary" />
+                  <Cpu className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 uppercase italic">Modelo Setup + Handoff</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -41,7 +41,7 @@ export default function TermsOfUse() {
               </div>
               <div className="p-8 rounded-3xl border border-primary/20 bg-primary/5">
                 <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
-                   <Layers className="w-6 h-6 text-primary" />
+                  <Layers className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 uppercase italic">Ecossistema Módulo Web</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">

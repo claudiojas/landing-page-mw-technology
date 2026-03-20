@@ -15,16 +15,16 @@ export default function PrivacyPolicy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-16 text-center lg:text-left"
+            className="relative z-20 mb-16 text-center lg:text-left"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-[10px] font-black uppercase tracking-widest mb-6">
               <Shield className="w-3 h-3" />
               Privacidade Garantida
             </div>
-            <h1 className="text-4xl lg:text-7xl font-black mb-6 italic uppercase leading-none">
-              Política de <br/> <span className="text-emerald-500 text-6xl lg:text-8xl">Privacidade</span>
+            <h1 className="text-3xl lg:text-5xl font-black mb-6 italic uppercase leading-none">
+              Política de <br/> <span className="text-emerald-500 text-5xl lg:text-7xl">Privacidade</span>
             </h1>
-            <p className="text-muted-foreground text-lg italic">Última atualização: 20 de Março de 2024</p>
+            <p className="text-muted-foreground text-lg italic">Última atualização: 20 de Março de 2026</p>
           </motion.div>
 
           <div className="prose prose-invert prose-emerald max-w-none space-y-12 text-muted-foreground/90 font-medium">
@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
             <section className="space-y-4 pt-12 border-t border-white/5">
               <h2 className="text-2xl font-black text-foreground uppercase">4. Contato</h2>
               <p>
-                Para dúvidas sobre sua privacidade, entre em contato via <a href="mailto:contato@moduloweb.tech" className="text-emerald-500 hover:underline">contato@moduloweb.tech</a> ou através do seu Gerente de Projetos dedicado.
+                Para dúvidas sobre sua privacidade, entre em contato via <a href="mailto:contato.moduloweb@gmail.com" className="text-emerald-500 hover:underline">contato.moduloweb@gmail.com</a> ou através do seu Gerente de Projetos dedicado.
               </p>
             </section>
           </div>
