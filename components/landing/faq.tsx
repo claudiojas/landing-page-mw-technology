@@ -10,34 +10,34 @@ import {
 
 const faqs = [
   {
-    question: "Por que vocês usam Next.js ao invés de WordPress?",
+    category: "Escalabilidade",
+    question: "Se eu colocar 50k+ pessoas no site hoje, ele aguenta ou vai cair?",
     answer:
-      "WordPress é uma ferramenta generalista que carrega plugins desnecessários e código legado. Next.js permite construir páginas otimizadas do zero, com apenas o código necessário. O resultado: páginas 4-5x mais rápidas, melhor SEO e maior taxa de conversão.",
+      "Construímos com 'Infraestrutura de Guerra'. Usamos Next.js com Edge Computing e CDNs globais. Seu site não apenas aguenta picos massivos, como mantém a mesma velocidade de sub-1-segundo para todos os usuários simultâneos, garantindo que seu lançamento seja um sucesso sem travamentos.",
   },
   {
-    question: "Quanto tempo leva para entregar uma landing page?",
+    category: "Gestão",
+    question: "Vou ficar refém de vocês para sempre ou consigo alterar preços e banners sozinho?",
     answer:
-      "O prazo médio é de 7 a 14 dias úteis, dependendo da complexidade do projeto. Páginas simples podem ser entregues em até 5 dias. Cada projeto passa por fases de briefing, design, desenvolvimento e testes de performance antes da entrega.",
+      "Total autonomia de conteúdo. Entregamos o site integrado a um CMS intuitivo onde você pode alterar textos, preços e banners sem tocar em uma linha de código. A engenharia complexa e de alto desempenho fica sob nosso capô; o controle diário do seu negócio é 100% seu.",
   },
   {
-    question: "Vocês integram com meu sistema de CRM e automações?",
+    category: "Lucro & ROI",
+    question: "Como vou saber se o meu investimento em anúncios está realmente gerando lucro?",
     answer:
-      "Sim! Integramos com as principais ferramentas do mercado: RD Station, HubSpot, ActiveCampaign, Pipedrive, e qualquer ferramenta que possua API. Também configuramos webhooks personalizados para suas automações específicas.",
+      "Rastreamento Blindado. Diferente do rastreamento comum que perde 30% dos dados para adblockers, implementamos Tracking Server-Side via GTM. Você terá precisão absoluta para saber exatamente de onde vêm seus leads e qual o retorno real de cada real investido em Google/Meta Ads.",
   },
   {
-    question: "Como funciona o rastreamento blindado no servidor?",
+    category: "Valor de Mercado",
+    question: "Por que investir em arquitetura personalizada se um template de R$ 500 parece igual?",
     answer:
-      "Diferente do pixel tradicional (que roda no navegador do usuário), nosso rastreamento server-side envia os dados diretamente para as plataformas de anúncios. Isso significa dados 30-40% mais precisos, mesmo com bloqueadores de anúncios ou restrições de cookies.",
+      "Um template de R$ 500 é um ralo de dinheiro disfarçado. Ele vem carregado de 'lixo' técnico que destrói sua velocidade no 4G e afasta clientes qualificados. Nossa arquitetura personalizada é um ativo financeiro: ela carrega instantaneamente, escala sem custos extras e é feita especificamente para maximizar sua taxa de conversão.",
   },
   {
-    question: "Qual a garantia de performance?",
+    category: "Segurança",
+    question: "E se o site apresentar problemas exatamente no dia do meu lançamento?",
     answer:
-      "Garantimos score mínimo de 90 no Google Lighthouse e tempo de carregamento abaixo de 2 segundos. Se não atingirmos essas métricas, trabalhamos de graça até entregar. Nosso padrão interno é atingir 95+ e sub-1-segundo.",
-  },
-  {
-    question: "Vocês oferecem suporte após a entrega?",
-    answer:
-      "Sim! Oferecemos 30 dias de suporte técnico gratuito após a entrega. Após esse período, temos planos de manutenção mensais que incluem atualizações de segurança, monitoramento de performance e ajustes de conteúdo.",
+      "Monitoramento Ativo e Redundância. Nossa arquitetura distribuída garante que, se um servidor falhar, outro assume instantaneamente em milissegundos. Para grandes operações, oferecemos acompanhamento em tempo real durante o pico de tráfego, garantindo que sua única preocupação seja vender.",
   },
 ]
 
@@ -88,8 +88,15 @@ export function FAQ() {
                 value={`item-${index}`}
                 className="bg-card rounded-xl border border-border px-6 data-[state=open]:border-primary/50 transition-colors"
               >
-                <AccordionTrigger className="text-left text-foreground font-semibold hover:text-primary transition-colors py-5 [&[data-state=open]]:text-primary">
-                  {faq.question}
+                <AccordionTrigger className="text-left text-foreground font-semibold hover:text-primary transition-colors py-6 data-[state=open]:text-primary group">
+                  <div className="flex flex-col gap-1 w-full">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-primary/50 group-data-[state=open]:text-primary/70 mb-1">
+                      {faq.category}
+                    </span>
+                    <span className="text-base sm:text-lg pr-4">
+                      {faq.question}
+                    </span>
+                  </div>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
                   {faq.answer}
