@@ -3,7 +3,9 @@
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, Zap, Gauge, ShieldCheck } from "lucide-react"
+import { ArrowRight, Zap, Gauge, ShieldCheck } from "lucide-react"
+import { PerformanceMockup } from "./performance-mockup"
+import { motion } from "framer-motion"
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -29,70 +31,84 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden border-b border-border/5"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-border/5 pt-16 lg:pt-20"
     >
       {/* Subtle Background Elements */}
-      <div className="bubble w-96 h-96 -top-20 -left-20 animate-swing opacity-[0.15]" />
-      <div className="bubble w-64 h-64 bottom-1/4 -right-10 animate-float opacity-[0.1]" style={{ animationDelay: "2s" }} />
+      <div className="bubble w-96 h-96 -top-20 -left-20 animate-swing opacity-[0.08]" />
+      <div className="bubble w-64 h-64 bottom-1/4 -right-10 animate-float opacity-[0.06]" style={{ animationDelay: "2s" }} />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 text-center">
-        <div className="space-y-12">
-          {/* Main Headline Group */}
-          <div className="space-y-8 animate-fade-in-up">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tighter mx-auto">
-              <span className="block mb-2">Seu site leva 3 segundos para carregar?</span>
-              <span className="gradient-text block">Parabéns, você acaba de perder 50% do seu lucro.</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground/80 leading-relaxed max-w-3xl mx-auto font-medium">
-              Enquanto você tenta &quot;vender&quot;, o Google e o Meta cobram pelo clique de leads que nunca chegam a ver sua oferta. Na Módulo Web, trocamos o amadorismo do WordPress pela Engenharia de Elite para que seu orçamento pare de escorrer pelo ralo.
-            </p>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-10 lg:py-12 w-full">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+          
+          {/* Column: Text Content (Now first on all devices for maximum impact) */}
+          <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-left lg:max-w-2xl">
+            {/* Main Headline Group */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-3 sm:space-y-4 lg:space-y-6"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+                <Zap className="w-3 h-3" />
+                Engenharia de Elite
+              </div>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl xl:text-5xl font-black leading-[1.15] tracking-tighter">
+                <span className="block mb-1 text-balance">Seu site leva 2 segundos para carregar?</span>
+                <span className="gradient-text block text-balance">Parabéns, você esta perdendo metade do seu lucro!</span>
+              </h1>
+              <p className="text-sm sm:text-base lg:text-xl text-muted-foreground/80 leading-relaxed font-medium max-w-xl text-balance">
+                Cerca de 53% dos usuários de dispositivos móveis abandonam um site se ele demorar mais de 3 segundos para carregar.
+              </p>
+            </motion.div>
 
-          {/* Call to Action Group */}
-          <div className="flex flex-col items-center gap-10 pt-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            {/* Call to Action Group */}
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+            >
               <Button
                 asChild
                 size="lg"
-                className="bg-linear-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold px-10 py-7 text-base rounded-full glow-purple"
+                className="bg-linear-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold px-8 sm:px-10 py-5 sm:py-7 text-sm sm:text-base rounded-full glow-purple group"
               >
                 <Link 
                   href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site."
                   target="_blank"
                 >
                   FALAR COM ESPECIALISTA
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-border hover:bg-secondary text-foreground font-semibold px-10 py-7 text-base rounded-full"
-              >
-                <Link href="#prova">
-                  <Play className="mr-2 h-5 w-5" />
-                  Ver Performance
-                </Link>
-              </Button>
-            </div>
+            </motion.div>
 
-            {/* Authority Badges - Integrated Under CTA */}
-            <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-12 pt-4 opacity-70 scale-90 sm:scale-100">
+            {/* Authority Badges */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="flex flex-wrap items-center gap-4 sm:gap-6 opacity-70"
+            >
               <div className="flex items-center gap-2">
-                <Gauge className="w-5 h-5 text-green-500" />
-                <span className="text-sm font-medium">100% Lighthouse Score</span>
+                <Gauge className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
+                <span className="text-[10px] sm:text-[12px] font-extrabold uppercase tracking-tight">100% Score</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">Next.js Speed Optimized</span>
+                <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+                <span className="text-[10px] sm:text-[12px] font-extrabold uppercase tracking-tight">SEO de Elite</span>
               </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">Foco Total em ROI</span>
-              </div>
+            </motion.div>
+          </div>
+
+          {/* Column: Visual Mockup */}
+          <div className="relative w-full flex justify-center lg:justify-end lg:scale-100 xl:scale-110 origin-center lg:origin-right mt-4 sm:mt-6 lg:mt-0">
+             <div className="w-full max-w-[340px] sm:max-w-md lg:max-w-none">
+              <PerformanceMockup />
             </div>
           </div>
+
         </div>
       </div>
     </section>
