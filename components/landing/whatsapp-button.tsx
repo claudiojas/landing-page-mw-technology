@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react"
 export function WhatsAppButton() {
   const handleClick = () => {
     window.open(
-      "https://wa.me/5598985066966?text=Olá! Vim através da Landing Page e gostaria de agendar meu Diagnóstico de Performance.",
+      "https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site.",
       "_blank"
     )
   }

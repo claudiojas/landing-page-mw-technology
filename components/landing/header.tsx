@@ -43,10 +43,10 @@ export function Header() {
               className="bg-linear-to-r from-primary to-accent hover:opacity-90 transition-opacity text-primary-foreground font-semibold px-6 rounded-full"
             >
               <Link 
-                href="https://wa.me/5598985066966?text=Olá! Gostaria de iniciar meu Diagnóstico de Performance."
+                href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site."
                 target="_blank"
               >
-                Agendar Diagnóstico
+                Falar com Especialista
               </Link>
             </Button>
           </div>
@@ -79,8 +79,8 @@ export function Header() {
                 asChild
                 className="bg-linear-to-r from-primary to-accent hover:opacity-90 transition-opacity text-primary-foreground font-semibold rounded-full mt-2"
               >
-                <Link href="#triagem" onClick={() => setIsMenuOpen(false)}>
-                  Iniciar Triagem
+                <Link href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site." onClick={() => setIsMenuOpen(false)} target="_blank">
+                  Falar com Especialista
                 </Link>
               </Button>
             </nav>

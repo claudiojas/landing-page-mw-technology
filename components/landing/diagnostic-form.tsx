@@ -181,7 +181,7 @@ export function DiagnosticForm() {
           >
             {isSubmitting ? "Processando..." : (
               <>
-                Finalizar Diagnóstico <Send className="ml-2 h-4 w-4" />
+                Solicitar Diagnóstico Especializado <Send className="ml-2 h-4 w-4" />
               </>
             )}
           </Button>

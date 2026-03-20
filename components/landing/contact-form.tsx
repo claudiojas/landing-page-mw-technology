@@ -60,8 +60,8 @@ export function ContactForm() {
     const data = Object.fromEntries(formData)
     
     // WhatsApp redirect with form data
-    const message = `Olá! Gostaria de agendar um diagnóstico.\n\nNome: ${data.name}\nEmail: ${data.email}\nTelefone: ${phone}\nInvestimento em tráfego: ${data.investment}`
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`
+    const message = `Olá! Gostaria de falar com um especialista sobre a performance do meu site.\n\nNome: ${data.name}\nEmail: ${data.email}\nTelefone: ${phone}\nInvestimento em tráfego: ${data.investment}`
+    const whatsappUrl = `https://wa.me/5598985066966?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
 
@@ -87,7 +87,7 @@ export function ContactForm() {
                 Entre em <span className="gradient-text">Contato</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Preencha o formulário para agendar seu diagnóstico gratuito. 
+                Preencha o formulário para falar com um especialista. 
                 Vamos analisar sua situação atual e mostrar como podemos aumentar suas conversões.
               </p>
             </div>
@@ -125,8 +125,8 @@ export function ContactForm() {
             </div>
 
             {/* Guarantee Badge */}
-            <div className="reveal opacity-0 inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-4 border border-primary/20" style={{ animationDelay: "0.4s" }}>
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0">
+            <div className="reveal opacity-0 inline-flex items-center gap-3 bg-linear-to-r from-primary/10 to-accent/10 rounded-xl p-4 border border-primary/20" style={{ animationDelay: "0.4s" }}>
+              <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary to-accent flex items-center justify-center shrink-0">
                 <ShieldCheck className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
@@ -198,9 +198,9 @@ export function ContactForm() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold py-6 text-base rounded-xl animate-pulse-glow"
+                className="w-full bg-linear-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold py-6 text-base rounded-xl animate-pulse-glow"
               >
-                AGENDAR MEU DIAGNÓSTICO NO WHATSAPP
+                FALAR COM ESPECIALISTA NO WHATSAPP
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
 

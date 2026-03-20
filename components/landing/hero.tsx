@@ -57,10 +57,10 @@ export function Hero() {
                 className="bg-linear-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold px-10 py-7 text-base rounded-full glow-purple"
               >
                 <Link 
-                  href="https://wa.me/5598985066966?text=Olá! Gostaria de agendar o meu Diagnóstico de Performance de Elite."
+                  href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site."
                   target="_blank"
                 >
-                  AGENDAR DIAGNÓSTICO DE PERFORMANCE
+                  FALAR COM ESPECIALISTA
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
