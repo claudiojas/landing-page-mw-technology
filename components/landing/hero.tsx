@@ -31,13 +31,13 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-border/5 pt-16 lg:pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-border/5 pt-32 lg:pt-20"
     >
       {/* Subtle Background Elements */}
       <div className="bubble w-96 h-96 -top-20 -left-20 animate-swing opacity-[0.08]" />
       <div className="bubble w-64 h-64 bottom-1/4 -right-10 animate-float opacity-[0.06]" style={{ animationDelay: "2s" }} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-10 lg:py-12 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-10 lg:py-12 w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           
           {/* Column: Text Content (Now first on all devices for maximum impact) */}
@@ -105,7 +105,7 @@ export function Hero() {
           </div>
 
           {/* Column: Visual Mockup */}
-          <div className="relative w-full flex justify-center lg:justify-end lg:scale-100 xl:scale-110 origin-center lg:origin-right mt-4 sm:mt-6 lg:mt-0">
+          <div className="relative w-full flex justify-center lg:justify-end lg:scale-100 xl:scale-110 origin-center lg:origin-right mt-12 sm:mt-6 lg:mt-0">
              <div className="w-full max-w-[340px] sm:max-w-md lg:max-w-none">
               <PerformanceMockup />
             </div>
