@@ -1,6 +1,6 @@
 import { Header } from "@/components/landing/header"
 import { Hero } from "@/components/landing/hero"
-import { Benefits } from "@/components/landing/benefits"
+import { PerformanceImpact } from "@/components/landing/performance-impact"
 import { Comparison } from "@/components/landing/comparison"
 import { About } from "@/components/landing/about"
 import { Portfolio } from "@/components/landing/portfolio"
@@ -14,7 +14,7 @@ export default function HomePage() {
     <main className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <Benefits />
+      <PerformanceImpact />
       <Comparison />
       <About />
       <Portfolio />
