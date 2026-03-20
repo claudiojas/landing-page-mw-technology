@@ -82,7 +82,7 @@ export function PerformanceImpact() {
                   
                   {/* Expectation Marker (Higher) */}
                   <div className="absolute top-[-33px] left-[20%] -translate-x-1/2 flex flex-col items-center">
-                    <span className="text-[10px] font-bold text-green-500 whitespace-nowrap">2s (Expectativa)</span>
+                    <span className="text-[10px] font-bold text-green-500 whitespace-nowrap">2s<span className="hidden lg:inline"> (Expectativa)</span></span>
                     <div className="w-px h-3 bg-green-500/30" />
                   </div>
 
