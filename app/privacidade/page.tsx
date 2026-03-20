@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
               Privacidade Garantida
             </div>
             <h1 className="text-3xl lg:text-5xl font-black mb-6 italic uppercase leading-none">
-              Política de <br/> <span className="text-emerald-500 text-5xl lg:text-7xl">Privacidade</span>
+              Política de <br/> <span className="text-emerald-500 text-5xl lg:text-7xl pr-4">Privacidade</span>
             </h1>
             <p className="text-muted-foreground text-lg italic">Última atualização: 20 de Março de 2026</p>
           </motion.div>
