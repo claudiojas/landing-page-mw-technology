@@ -182,18 +182,31 @@ export function PortfolioShowcase() {
           ))}
         </div>
 
-        {/* Closing CTA for section */}
+        {/* Structural Bridge to Education */}
         <motion.div 
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
-           className="mt-20 lg:mt-32 text-center"
+           className="mt-32 lg:mt-56 relative"
         >
-          <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl lg:text-5xl font-black text-balance">Pronto para ter um site que <br className="hidden lg:block"/> performa como estes?</h2>
-            <button className="px-10 py-5 bg-primary text-primary-foreground font-black rounded-full hover:scale-105 transition-transform shadow-2xl shadow-primary/40">
-              SOLICITAR DIAGNÓSTICO GRATUITO
-            </button>
+          {/* Asymmetrical Narrative Hook */}
+          <div className="grid lg:grid-cols-2 gap-12 items-end text-left border-t border-primary/10 pt-16">
+            <div className="space-y-6">
+              <h2 className="text-3xl lg:text-6xl font-black leading-tight tracking-tighter">
+                Pronto para <br/>
+                <span className="text-primary italic">performar?</span>
+              </h2>
+            </div>
+            <div className="space-y-4">
+              <p className="text-muted-foreground text-sm lg:text-lg font-medium leading-relaxed">
+                No mercado, você encontrará promessas de "sites rápidos" por R$ 500. 
+                Mas na prática, o custo invisível do amadorismo é um buraco no seu ROI.
+              </p>
+              <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+                <div className="w-8 h-px bg-primary" />
+                Desça para entender o risco
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
