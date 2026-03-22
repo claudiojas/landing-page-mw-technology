@@ -1,71 +1,83 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ShieldCheck, Target, ArrowRight } from "lucide-react"
+import { ArrowRight, Zap, Gauge, Flame, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export function FinalReinforcement() {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden bg-background">
-      {/* Background Graphic */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl h-full -z-10 opacity-[0.03] pointer-events-none">
-        <Target className="w-full h-full" />
+    <section className="relative py-10 sm:py-16 overflow-hidden bg-background">
+      {/* Background Decorative Mesh */}
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none appearance-none translate-y-[-10%]">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="grid-small" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="white" strokeWidth="0.5"/>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#grid-small)" />
+        </svg>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-linear-to-br from-zinc-900 via-zinc-900 to-black border border-white/5 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden shadow-2xl"
+          className="relative bg-linear-to-br from-zinc-900/90 via-zinc-900/60 to-black border border-white/10 rounded-4xl p-8 sm:p-12 overflow-hidden shadow-2xl border-glow group"
         >
-          <div className="relative z-10 space-y-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest mx-auto">
-              Diferenciação Clara
+          {/* Internal Glows */}
+          <div className="absolute -top-12 -left-12 w-48 h-48 bg-primary/10 blur-[80px] pointer-events-none opacity-40" />
+          <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-accent/10 blur-[80px] pointer-events-none opacity-40" />
+
+          <div className="relative z-10 space-y-4 sm:space-y-6">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[9px] font-black uppercase tracking-widest mx-auto">
+              <Sparkles className="w-2.5 h-2.5" />
+              Impacto Estratégico
             </div>
             
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tighter">
-              Não criamos páginas bonitas.<br/>
-              <span className="gradient-text uppercase">Criamos estruturas que lucram.</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-[1.1] tracking-tighter">
+              Pare de tentar adivinhar.<br/>
+              <span className="gradient-text uppercase leading-tight">Escolha Engenharia de Elite.</span>
             </h2>
             
-            <p className="text-muted-foreground text-lg sm:text-xl font-medium max-w-2xl mx-auto">
-              Transformamos visitantes aleatórios em clientes fiéis através de engenharia real e psicologia de vendas.
+            <p className="text-muted-foreground text-sm sm:text-base font-medium max-w-xl mx-auto leading-relaxed">
+              Enquanto seus concorrentes criam apenas "páginas bonitas", nós construímos estruturas de lucro baseadas em psicologia de vendas e dados reais.
             </p>
 
-            <div className="pt-8">
+            <div className="pt-2">
               <Button
                 asChild
-                size="xl"
-                className="rounded-full px-12 py-8 text-lg bg-linear-to-r from-primary to-accent font-black transition-all hover:scale-105 glow-purple group"
+                size="lg"
+                className="rounded-full px-8 py-6 text-sm bg-linear-to-r from-primary to-accent font-black transition-all hover:scale-105 glow-purple"
               >
                 <Link href="/diagnostics">
-                  QUERO MEU DIAGNÓSTICO GRATUITO
-                  <ArrowRight className="ml-2 w-6 h-6 transition-transform group-hover:translate-x-1" />
+                  RECEBER MEU DIAGNÓSTICO AGORA
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
             </div>
             
-            <div className="pt-12 grid grid-cols-2 sm:grid-cols-3 gap-8 opacity-40">
-               <div className="flex flex-col items-center gap-2">
-                  <ShieldCheck className="w-6 h-6" />
-                  <span className="text-[10px] font-black uppercase tracking-wider">Segurança Real</span>
-               </div>
-               <div className="flex flex-col items-center gap-2">
-                  <Target className="w-6 h-6" />
-                  <span className="text-[10px] font-black uppercase tracking-wider">FOCO EM ROI</span>
-               </div>
-               <div className="flex flex-col items-center gap-2 col-span-2 sm:col-span-1">
-                  <span className="text-xl font-black italic">v1.2</span>
-                  <span className="text-[10px] font-black uppercase tracking-wider">VERSION LEVEL</span>
-               </div>
+            <div className="pt-6 sm:pt-8 grid grid-cols-3 gap-2 sm:gap-4 border-t border-white/5 bg-white/1 -mx-8 sm:-mx-12 px-8 sm:px-12 pb-0 mt-6">
+                <div className="flex flex-col items-center gap-1.5 py-4">
+                   <div className="p-1.5 rounded-lg bg-primary/5 border border-primary/10 text-primary">
+                      <Zap size={16} />
+                   </div>
+                   <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-widest text-muted-foreground/80 leading-tight">Velocidade <br /> Extrema</span>
+                </div>
+                <div className="flex flex-col items-center gap-1.5 py-4 border-x border-white/5 text-primary">
+                   <div className="p-1.5 rounded-lg bg-primary/5 border border-primary/10">
+                      <Gauge size={16} />
+                   </div>
+                   <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-widest text-muted-foreground/80 leading-tight">Foco <br /> em ROI</span>
+                </div>
+                <div className="flex flex-col items-center gap-1.5 py-4 text-primary">
+                   <div className="p-1.5 rounded-lg bg-primary/5 border border-primary/10">
+                      <Flame size={16} />
+                   </div>
+                   <span className="text-[7px] sm:text-[9px] font-bold uppercase tracking-widest text-muted-foreground/80 leading-tight">30 Dias de <br /> Suporte</span>
+                </div>
             </div>
           </div>
-
-          {/* Patterns */}
-          <div className="absolute top-0 left-0 w-32 h-32 bg-primary/20 blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-accent/20 blur-[100px] pointer-events-none" />
         </motion.div>
       </div>
     </section>
