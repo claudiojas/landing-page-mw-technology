@@ -85,7 +85,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-foreground mb-4">Contato</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>São Luís, Brasil</li>
+              <li>Pinheiro, Brasil</li>
               <li>contato.moduloweb@gmail.com</li>
               <li>(98) 9 8506-6966</li>
             </ul>

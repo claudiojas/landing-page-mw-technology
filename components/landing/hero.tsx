@@ -34,8 +34,8 @@ export function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-border/5 pt-32 lg:pt-20"
     >
       {/* Subtle Background Elements */}
-      <div className="bubble w-96 h-96 -top-20 -left-20 animate-swing opacity-[0.08]" />
-      <div className="bubble w-64 h-64 bottom-1/4 -right-10 animate-float opacity-[0.06]" style={{ animationDelay: "2s" }} />
+      <div className="bubble w-72 h-72 -top-20 -left-20 animate-swing opacity-[0.08]" />
+      <div className="bubble w-48 h-48 bottom-1/4 -right-10 animate-float opacity-[0.06]" style={{ animationDelay: "2s" }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-10 lg:py-12 w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -49,16 +49,16 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="space-y-3 sm:space-y-4 lg:space-y-6"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-widest mx-auto lg:mx-0">
-                <Zap className="w-3 h-3" />
+              <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] mx-auto lg:mx-0">
+                <Zap className="w-2.5 h-2.5" />
                 Engenharia de Elite
               </div>
               <h1 className="text-xl sm:text-2xl lg:text-4xl xl:text-5xl font-black leading-[1.15] tracking-tighter">
-                <span className="block mb-1 text-balance">Seu site leva 2 segundos para carregar?</span>
-                <span className="gradient-text block text-balance">Parabéns, você esta perdendo metade do seu lucro!</span>
+                <span className="block mb-1 text-balance">Seu site pode estar perdendo vendas todos os dias — e você nem percebe.</span>
+                <span className="gradient-text block text-balance">Descubra exatamente onde está o problema com um diagnóstico gratuito.</span>
               </h1>
               <p className="text-sm sm:text-base lg:text-xl text-muted-foreground/80 leading-relaxed font-medium max-w-xl text-balance mx-auto lg:mx-0">
-                Cerca de 53% dos usuários de dispositivos móveis abandonam um site se ele demorar mais de 3 segundos para carregar.
+                Pare de queimar dinheiro com tráfego que não converte. Receba uma análise técnica completa do seu funil gerada por nossa IA de Engenharia.
               </p>
             </motion.div>
 
@@ -76,10 +76,9 @@ export function Hero() {
                   className="w-full sm:w-auto bg-linear-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold px-8 sm:px-10 py-5 sm:py-7 text-sm sm:text-base rounded-full glow-purple group"
                 >
                   <Link 
-                    href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site."
-                    target="_blank"
+                    href="/diagnostics"
                   >
-                    FALAR COM ESPECIALISTA
+                    👉 Quero meu diagnóstico gratuito
                     <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
@@ -105,8 +104,8 @@ export function Hero() {
           </div>
 
           {/* Column: Visual Mockup */}
-          <div className="relative w-full flex justify-center lg:justify-end lg:scale-100 xl:scale-110 origin-center lg:origin-right mt-12 sm:mt-6 lg:mt-0">
-             <div className="w-full max-w-[340px] sm:max-w-md lg:max-w-none">
+          <div className="relative w-full flex justify-center lg:justify-end lg:scale-80 xl:scale-90 origin-center lg:origin-right mt-12 sm:mt-6 lg:mt-0">
+             <div className="w-full max-w-[340px] sm:max-w-sm lg:max-w-[420px]">
               <PerformanceMockup />
             </div>
           </div>

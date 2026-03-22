@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Logo } from "./logo"
 
 const navLinks = [
+  { href: "#como-funciona", label: "Como Funciona" },
   { href: "#diferenciais", label: "Diferenciais" },
-  { href: "#especialista", label: "Especialista" },
   { href: "#portfolio", label: "Portfolio" },
+  { href: "#pricing", label: "Preço" },
   { href: "#faq", label: "FAQ" },
 ]
 
@@ -43,10 +44,9 @@ export function Header() {
               className="bg-linear-to-r from-primary to-accent hover:opacity-90 transition-opacity text-primary-foreground font-semibold px-6 rounded-full"
             >
               <Link 
-                href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site."
-                target="_blank"
+                href="/diagnostics"
               >
-                Falar com Especialista
+                Diagnóstico Gratuito
               </Link>
             </Button>
           </div>
@@ -79,8 +79,8 @@ export function Header() {
                 asChild
                 className="bg-linear-to-r from-primary to-accent hover:opacity-90 transition-opacity text-primary-foreground font-semibold rounded-full mt-2"
               >
-                <Link href="https://wa.me/5598985066966?text=Olá! Gostaria de falar com um especialista sobre a performance do meu site." onClick={() => setIsMenuOpen(false)} target="_blank">
-                  Falar com Especialista
+                <Link href="/diagnostics" onClick={() => setIsMenuOpen(false)}>
+                  Diagnóstico Gratuito
                 </Link>
               </Button>
             </nav>

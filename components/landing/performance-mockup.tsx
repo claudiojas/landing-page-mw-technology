@@ -5,7 +5,7 @@ import { Gauge, Zap, ShieldCheck, ArrowUpRight, Globe, MousePointer2 } from "luc
 
 export function PerformanceMockup() {
   return (
-    <div className="relative w-full max-w-[500px] mx-auto lg:ml-auto">
+    <div className="relative w-full max-w-[380px] mx-auto lg:ml-auto">
       {/* Decorative Glow Background */}
       <div className="absolute -inset-4 bg-linear-to-r from-primary/20 to-accent/20 blur-3xl rounded-full opacity-50" />
       
@@ -38,35 +38,35 @@ export function PerformanceMockup() {
                initial={{ scale: 0.8, opacity: 0 }}
                animate={{ scale: 1, opacity: 1 }}
                transition={{ delay: 0.5, duration: 0.5 }}
-               className="relative w-32 h-32 flex items-center justify-center"
+               className="relative w-24 h-24 flex items-center justify-center"
              >
                 <svg className="w-full h-full transform -rotate-90">
                   <circle
-                    cx="64"
-                    cy="64"
-                    r="58"
+                    cx="48"
+                    cy="48"
+                    r="43"
                     stroke="currentColor"
-                    strokeWidth="8"
+                    strokeWidth="6"
                     fill="transparent"
                     className="text-muted/20"
                   />
                   <motion.circle
-                    cx="64"
-                    cy="64"
-                    r="58"
+                    cx="48"
+                    cy="48"
+                    r="43"
                     stroke="currentColor"
-                    strokeWidth="8"
+                    strokeWidth="6"
                     fill="transparent"
-                    strokeDasharray={364.4}
-                    initial={{ strokeDashoffset: 364.4 }}
+                    strokeDasharray={270}
+                    initial={{ strokeDashoffset: 270 }}
                     animate={{ strokeDashoffset: 0 }}
                     transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
                     className="text-green-500"
                   />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-3xl font-black text-foreground">100</span>
-                  <span className="text-[8px] uppercase tracking-widest font-bold text-green-500">Performance</span>
+                  <span className="text-2xl font-black text-foreground">100</span>
+                  <span className="text-[7px] uppercase tracking-widest font-bold text-green-500">Performance</span>
                 </div>
              </motion.div>
              

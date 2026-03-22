@@ -36,8 +36,8 @@ export function PerformanceImpact() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-balance mb-6"
           >
-            Por que a Engenharia Módulo Web converte onde{" "}
-            <span className="text-muted-foreground/40 line-through decoration-red-500/50">outras agências falham?</span>
+            A maioria dos negócios não tem problema de <span className="text-primary italic underline decoration-wavy">Tráfego.</span><br/>
+            Tem problema de <span className="gradient-text uppercase">Conversão.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export function PerformanceImpact() {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground text-lg max-w-3xl mx-auto"
           >
-            A paciência do usuário no digital evaporou. Cada milissegundo de atraso é uma hemorragia direta no seu faturamento.
+            Visitantes entram, mas não viram clientes. É esse o vazamento que uma landing page bem estruturada e estratégica resolve.
           </motion.p>
         </div>
 
