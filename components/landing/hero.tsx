@@ -39,11 +39,11 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-10 lg:py-12 w-full">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-          
+
           {/* Column: Text Content (Now first on all devices for maximum impact) */}
           <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left lg:max-w-2xl flex flex-col items-center lg:items-start">
             {/* Main Headline Group */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -53,9 +53,9 @@ export function Hero() {
                 <Zap className="w-2.5 h-2.5" />
                 Engenharia de Elite
               </div>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl xl:text-5xl font-black leading-[1.15] tracking-tighter">
-                <span className="block mb-1 text-balance">Seu site pode estar perdendo vendas todos os dias — e você nem percebe.</span>
-                <span className="gradient-text block text-balance">Descubra exatamente onde está o problema com um diagnóstico gratuito.</span>
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black leading-[1.1] tracking-tighter">
+                <span className="block mb-2 text-balance text-white">O problema não é o seu tráfego.</span>
+                <span className="gradient-text block text-balance">É a sua página.</span>
               </h1>
               <p className="text-sm sm:text-base lg:text-xl text-muted-foreground/80 leading-relaxed font-medium max-w-xl text-balance mx-auto lg:mx-0">
                 Pare de queimar dinheiro com tráfego que não converte. Receba uma análise técnica completa do seu funil gerada por nossa IA de Engenharia.
@@ -64,7 +64,7 @@ export function Hero() {
 
             {/* CTA + Badges Group (Centered relative to each other) */}
             <div className="flex flex-col items-center lg:items-center w-full lg:w-fit gap-4 sm:gap-6">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -75,7 +75,7 @@ export function Hero() {
                   size="lg"
                   className="w-full sm:w-auto bg-linear-to-r from-primary to-accent hover:opacity-90 transition-all text-primary-foreground font-bold px-8 sm:px-10 py-5 sm:py-7 text-sm sm:text-base rounded-full glow-purple group"
                 >
-                  <Link 
+                  <Link
                     href="/diagnostics"
                   >
                     👉 Quero meu diagnóstico gratuito
@@ -85,7 +85,7 @@ export function Hero() {
               </motion.div>
 
               {/* Authority Badges */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
@@ -104,8 +104,8 @@ export function Hero() {
           </div>
 
           {/* Column: Visual Mockup */}
-          <div className="relative w-full flex justify-center lg:justify-end lg:scale-80 xl:scale-90 origin-center lg:origin-right mt-12 sm:mt-6 lg:mt-0">
-             <div className="w-full max-w-[340px] sm:max-w-sm lg:max-w-[420px]">
+          <div className="relative w-full flex justify-center lg:justify-end lg:scale-110 xl:scale-125 origin-center lg:origin-right mt-12 sm:mt-6 lg:mt-0">
+            <div className="w-full max-w-[340px] sm:max-w-md lg:max-w-[500px]">
               <PerformanceMockup />
             </div>
           </div>
